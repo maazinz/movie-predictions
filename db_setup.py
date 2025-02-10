@@ -11,11 +11,20 @@ CREATE TABLE IF NOT EXISTS movies (
     budget REAL,
     popularity REAL,
     revenue REAL,
-    release_date TEXT.
+    release_date TEXT,
     runtime INTEGER,
     production_companies TEXT,
+    production_countries TEXT,
     origin_country TEXT,
     adult BOOLEAN,
-    genres TEXT
+    genres TEXT,
+    vote_average REAL,
+    vote_count INTEGER,
+    original_language TEXT
 )
 """
+
+cursor.execute(table_creation_query)
+conn.commit()
+
+conn.close()
